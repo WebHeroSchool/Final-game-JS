@@ -269,7 +269,7 @@ input[type=radio] {
         background-size: contain;
     }
 }
-/*CSS for tablets devises */
+/*CSS for tablets devices */
 @media (min-width: 768px) and (max-width: 1024px) {
     /*Container content*/
     .container {
@@ -348,12 +348,21 @@ input[type=radio] {
 /*CSS for other desk */
 @media (min-width: 1024px) and (max-width: 1366px) {
 
+    /*Main desk */
+    .main-desk {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow-y: auto ;
+    }
     .main-desk__title {
+        width: 90%;
         font-size: 65px;
         padding: 5px 0 0 10px;
         margin-bottom: 2%;
     }
     .main-desk__description {
+        width: 90%;
         font-size: 33px;
         padding: 10px 0 0 10px;
     }
@@ -364,9 +373,9 @@ input[type=radio] {
     /*Level select Menu */
     .main_menu {
         width: 90%;
-        height: 40%;
+        height: 60%;
         text-align: center;
-        margin: 20% 0 0 5%;
+        margin: 10% 0 0 5%;
     }
     .label {
         width: 100%;
@@ -378,8 +387,8 @@ input[type=radio] {
         height: 9%;
     }
     .start-but {
-        height: 25%;
-        width: 70%;
+        height: 15%;
+        width: 50%;
         margin: 10% 0 0 5%;
         font-size: 50px;
     }

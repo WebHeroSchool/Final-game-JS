@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточная игра "Найди баг"</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" >
+</head>
+
+<body class="container">
+    <div class="main-desk" id="main">
+            <h1 class="main-desk__title"> Выберите уровень сложности:</h1>
+                <p class="main-desk__description"> Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+        <div class="main_card-box">
+            <div class="Card1">
+                <img src="images/CardOnMain1.png" alt="Здесь должна быть карта">
+            </div>
+            <div class="Card2">
+                <img src="images/CardOnMain2.png" alt="Здесь должна быть карта">
+            </div>
+        </div>
+
+        <form class="main_menu" id="form-menu">
+            <label class="label" for="easy">
+                <input class="level__easy" type="radio" name="level" value="easy" id="easy" checked>
+                   <p class="label__text checked" id="easy-select"> Простой</p>
+        </label>
+            <label class="label" for="medium">
+                <input class="level__medium" type="radio" name="level" value="medium" id="medium">
+                <p class="label__text" id="medium-select"> Средний</p>
+         </label>
+            <label class="label" for="hard">
+                <input class="level__hard" type="radio" name="level" value="hard" id="hard" >
+                    <p class="label__text" id="hard-select"> Сложный</p>
+            </label>
+            <input type="button" value="Начать игру" class="start-but" id="start">
+        </form>
+    </div>
+<script src="./script/scriptCard.js"></script>
+</body>
+</html>

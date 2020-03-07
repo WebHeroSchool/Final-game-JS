@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input[type=radio] {
+    display: none ;
+}
+/*Container content*/
+.container {
+    background: url(../images/Background.png) center center no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    min-width: 900px;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+    color: #ffff;
+
+}
+/*Main desk */
+.main-desk {
+    position: fixed;
+    width: 880px;
+    height: 630px;
+    padding: 50px 160px;
+    color: #FFFFFF;
+}
+.main-desk__title {
+    font-size: 57px;
+    font-weight: bold;
+}
+.main-desk__description {
+    padding: 15px 0 10% 0;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 19px;
+}
+/*Box with two cards in main desk */
+.main_card-box {
+    width: 60%;
+    height: 70%;
+    float: right;
+    display: flex;
+    position: absolute;
+    top: 35%;
+    right: 3%;
+}
+.Card1 {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    transform: rotate(2.0deg);
+    padding: 90px 0 0 150px;
+    margin: 0 0 0 135px;
+}
+.Card2 {
+    display: inline;
+    position: relative;
+    width: 385px;
+    height: 400px;
+    padding: 87px 0 0 0;
+    margin: 0 0 0 -190px;
+    z-index: 1;
+}
+
+/*Level select Menu */
+.main_menu {
+    width: 400px;
+    height: 475px;
+    display: block;
+    text-align: left;
+    float: left;
+}
+.label {
+    width: 50%;
+    height: 170px;
+    font-weight: bold;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+.label__text {
+    padding: 0 0 0 20px;
+    margin: 0;
+    line-height: 1.7em;
+}
+.label__text:hover {
+    text-shadow: 0 2px 7px darkred;
+    cursor: pointer;
+    opacity: .8;
+    transition: .4s;
+}
+.checked:before {
+    content: '';
+    position: absolute;
+    left: 140px;
+    height: 73px;
+    width: 100%;
+    background: url(../images/Rectangle.png) no-repeat 5px;
+}
+.start-but {
+    align-items: center;
+    height: 95px;
+    width: 352px;
+    border-radius: 7px;
+    background-color: #D62B2E;
+    font-size: 32px;
+    color: #ffff;
+    border: none;
+    outline: none;
+    margin: 25% 0 0 -10%;
+}
+
+.start-but:hover {
+    background-color: tomato;
+    box-shadow: 0 0 10px darkslateblue;
+    transition: .5s;
+    cursor: pointer;
+    opacity: .9;
+}
+
+/*cards Maps */
+.desk-three-cards {
+    display: flex;
+    justify-content: space-between;
+    height: 341px;
+    width: 702px;
+    margin: 2% auto;
+}
+.desk-six-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 706px;
+    width: 702px;
+    margin: 2% auto;
+}
+
+.desk-ten-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 706px;
+    width: 1186px;
+    margin: 2% auto;
+}
+
+.card-click {
+    transform: rotateY(180deg);
+}
+
+/*Box of cards */
+.card-box {
+    box-shadow: 1px 1px 2px darkred;
+    cursor: pointer;
+    height: 341px;
+    width: 218px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card-box-hov:hover {
+    box-shadow: 10px 10px 15px darkred;
+    transform: rotate(-3.08deg) translateY(-15px);
+    transition: .4s;
+}
+
+.card-win-game {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background: url(../images/cardWin.png) no-repeat;
+}
+
+.card-over-game {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background: url(../images/cardOver.png) no-repeat;
+}
+
+.card-backside {
+    background: url(../images/cardback.png) no-repeat;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+/*CSS for mobile*/
+@media (min-width: 320px) and (max-width: 568px) {
+    /*Container content*/
+    .container {
+        min-width: 100%;
+        height: 100vh;
+    }
+    /*Main desk */
+    .main-desk {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow-y: auto ;
+    }
+    .main-desk__title {
+        font-size: 37px;
+        padding: 5px 0 0 10px;
+    }
+    .main-desk__description {
+        padding: 10px 0 0 10px;
+    }
+    .main_card-box {
+    display: none;
+    }
+
+    /*Level select Menu */
+    .main_menu {
+        width: 90%;
+        height: 40%;
+        text-align: center;
+        margin: 12px 0 0 15px;
+    }
+    .label {
+        width: 100%;
+        height: 20%;
+        font-size: 42px;
+    }
+    .checked:before {
+        left: 12%;
+        height: 12%;
+    }
+    .start-but {
+        height: 25%;
+        width: 80%;
+        margin: 10% 0 0 5%;
+    }
+
+    /*cards Maps */
+    .desk-three-cards {
+        height: 92%;
+        width: 100%;
+        margin: 50% 5% 50% 5%;
+    }
+    .desk-six-cards {
+        height: 100%;
+        width: 100%;
+    }
+    .desk-ten-cards {
+        height: 100%;
+        width: 100%;
+    }
+
+    /*Box of cards */
+    .card-box {
+        height: 20%;
+        width: 23%;
+        margin: 5% 2% 2% 5%;
+    }
+    .card-win-game, .card-over-game,
+    .card-backside {
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+    }
+}
+/*CSS for tablets devises */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /*Container content*/
+    .container {
+        min-width: 100%;
+        height: 100vh;
+    }
+    /*Main desk */
+    .main-desk {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow-y: auto ;
+    }
+    .main-desk__title {
+        padding: 5px 0 0 10px;
+    }
+    .main-desk__description {
+        font-size: 30px;
+        padding: 10px 0 0 10px;
+    }
+    .main_card-box {
+        display: none;
+    }
+
+    /*Level select Menu */
+    .main_menu {
+        width: 90%;
+        height: 40%;
+        text-align: center;
+        margin: 20% 0 0 5%;
+    }
+    .label {
+        width: 100%;
+        height: 20%;
+    }
+    .checked:before {
+        left: 29%;
+        height: 9%;
+    }
+    .start-but {
+        height: 25%;
+        width: 80%;
+        margin: 10% 0 0 5%;
+    }
+
+    /*cards Maps */
+    .desk-three-cards {
+        height: 100%;
+        width: 100%;
+        margin: 50% 5% 30% 5%;
+    }
+    .desk-six-cards {
+        height: 112%;
+        width: 100%;
+    }
+    .desk-ten-cards {
+        height: 80%;
+        width: 71%;
+        margin-left: 15%;
+    }
+
+    /*Box of cards */
+    .card-box {
+        height: 26%;
+        width: 25%;
+        margin: 5% 2% 2% 5%;
+    }
+    .card-win-game, .card-over-game,
+    .card-backside {
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+    }
+}
+
+/*CSS for other desk */
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+    .main-desk__title {
+        font-size: 65px;
+        padding: 5px 0 0 10px;
+        margin-bottom: 2%;
+    }
+    .main-desk__description {
+        font-size: 33px;
+        padding: 10px 0 0 10px;
+    }
+    .main_card-box {
+        display: none;
+    }
+
+    /*Level select Menu */
+    .main_menu {
+        width: 90%;
+        height: 40%;
+        text-align: center;
+        margin: 20% 0 0 5%;
+    }
+    .label {
+        width: 100%;
+        height: 20%;
+        font-size: 65px;
+    }
+    .checked:before {
+        left: 30%;
+        height: 9%;
+    }
+    .start-but {
+        height: 25%;
+        width: 70%;
+        margin: 10% 0 0 5%;
+        font-size: 50px;
+    }
+
+    /*cards Maps */
+    .desk-three-cards {
+        height: 100%;
+        width: 100%;
+        margin: 50% 5% 30% 5%;
+    }
+    .desk-six-cards {
+        height: 112%;
+        width: 100%;
+    }
+    .desk-ten-cards {
+        height: 80%;
+        width: 71%;
+        margin-left: 15%;
+    }
+
+    /*Box of cards */
+    .card-box {
+        height: 26%;
+        width: 25%;
+        margin: 5% 2% 2% 5%;
+    }
+    .card-win-game, .card-over-game,
+    .card-backside {
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+    }
+}
